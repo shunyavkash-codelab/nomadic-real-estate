@@ -1,4 +1,5 @@
 module.exports = {
+  jit: 'true',
   content: ["./public/*.html"],
   theme: {
     container: {
@@ -7,12 +8,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        'gray-light' : '#f3f3f3',
-        'primary' : '#292929',
-        'secondary' : '#a8a8a8'
-      },
-      fontFamily: {
-        'body': ['"Lato"'],
+        'primary' : '#0E568A',
+        'secondary' : '#78C141'
       }
     },
   },

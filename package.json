@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.0.18"
+  },
+  "dependencies": {
+    "alpinejs": "^3.9.0"
   }
 }
