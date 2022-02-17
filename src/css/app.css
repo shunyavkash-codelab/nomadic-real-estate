@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.breadcrumbs-nav li:first-child a{
+    @apply pl-0;
+}
+.breadcrumbs-nav li:first-child a:before{
+    @apply hidden;
+}
+.breadcrumbs-nav li a:before {
+    content: "\f105";
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    @apply absolute top-0 left-0;
+}
+.breadcrumbs-nav li:last-child a{
+    @apply font-bold;
+}
