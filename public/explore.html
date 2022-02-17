@@ -12,49 +12,131 @@
     <link href="css/app.css" rel="stylesheet">
 </head>
 
-<body class="">
-  <div class="relative px-4 py-16 md:p-16">
-    <div class="max-w-screen-xl mx-auto">
-      <!-- notification ball -->
-      <button class="absolute z-30 p-2 text-gray-400 transition duration-300 ease-linear bg-transparent rounded-full appearance-none top-4 md:top-10 right-4 md:right-10 hover:bg-blue-600 md:p-3 hover:text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lg:w-7 lg:h-7" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
-          <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+
+<body class="flex h-screen">
+  <!-- sidebar div -->
+  <div class="flex flex-col flex-shrink-0 w-full max-w-xs px-6 py-10 bg-primary">
+    <a href="javascript:void(0);" class="flex-shrink-0 block mb-10">
+      <img src="images/logo.png" alt="" class="w-auto mx-auto" />
+    </a>
+
+    <ul class="flex-grow p-0 m-0 mb-10 overflow-auto text-base tracking-wide md:text-lg">
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-home"></i>
+          <span class="flex-grow pl-3 truncate">dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-briefcase"></i>
+          <span class="flex-grow pl-3 truncate">rent / banking</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-user-friends"></i>
+          <span class="flex-grow pl-3 truncate">work orders</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-calendar-alt"></i>
+          <span class="flex-grow pl-3 truncate">calendare</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-comment"></i>
+          <span class="flex-grow pl-3 truncate">communication</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-building"></i>
+          <span class="flex-grow pl-3 truncate">homebuyer discounts</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-user-circle"></i>
+          <span class="flex-grow pl-3 truncate">my profile</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="flex-shrink-0 p-0 m-0 text-base tracking-wide md:text-lg">
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-question-circle"></i>
+          <span class="flex-grow pl-3 truncate">get profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-cog"></i>
+          <span class="flex-grow pl-3 truncate">logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- END sidebar div -->
+
+  <!-- main screen -->
+  <div class="relative flex flex-col flex-grow overflow-auto">
+    <div class="absolute top-0 left-0 flex-shrink-0 w-full p-4 text-right bg-white lg:px-10">
+      <button class="p-2 text-gray-400 transition duration-300 ease-linear bg-transparent rounded-full appearance-none top-4 md:top-10 right-4 md:right-10 hover:bg-primary md:p-3 hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lg:w-7 lg:h-7" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+          <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
         </svg>
       </button>
-      <!-- notification ball -->
-  
-      <img src="https://06edkm734f-flywheel.netdna-ssl.com/wp-content/uploads/2018/02/logo-placeholder.png" class="bg-black mb-6 max-w-full mx-auto max-h-[120px] md:max-w-sm lg:max-w-md" alt="explore logo" />
-  
-      <h2 class="mb-4 text-3xl font-normal text-center text-blue-600 md:text-4xl xl:text-5xl">Homebuyer Discounts for Jaydip</h2>
-      <p class="text-lg text-black lg:text-xl">Thinking of buying a home now or in the future? Nomadic Tenants can get rebates through Explore, Nomadic Real Estate's sister company. Explore is a boutique real estate agency specialized in facilitating off-market deals within our network.</p>
-  
-      <div class="p-4 mt-10 border border-gray-400 shadow-inner md:px-6 lg:px-10 xl:px-14 md:py-8 bg-gray-50 shadow-gray-200">
-        <h2 class="mb-8 text-3xl font-normal text-center text-blue-600 capitalize md:mb-12 xl:mb-16 md:text-4xl xl:text-5xl">calculate current rebate offer:</h2>
-  
-        <h2 class="mb-8 text-3xl font-bold text-center text-green-600 md:mb-12 xl:mb-16 md:text-4xl xl:text-5xl">Where are you looking to buy?</h2>
-  
-        <div class="flex flex-col items-center mb-6 space-y-6 md:mb-10 lg:mb-14 xl:mb-20 sm:flex-row sm:items-stretch sm:justify-between sm:space-y-0 sm:space-x-6">
-          <!-- box 1 -->
-          <div class="flex items-center justify-center w-full h-40 max-w-xs p-2 bg-blue-600 border border-black shadow-lg lg:h-52 lg:max-w-sm shadow-gray-900">
-            <h3 class="text-xl font-medium text-center text-white md:text-2xl lg:text-3xl xl:text-4xl">Washington DC</h3>
-          </div>
-  
-          <!-- box 2 -->
-          <div class="flex items-center justify-center w-full h-40 max-w-xs p-2 bg-blue-600 border border-black shadow-lg lg:h-52 lg:max-w-sm shadow-gray-900">
-            <h3 class="text-xl font-medium text-center text-white md:text-2xl lg:text-3xl xl:text-4xl">Maryland</h3>
-          </div>
-  
-          <!-- box 3 -->
-          <div class="flex items-center justify-center w-full h-40 max-w-xs p-2 bg-blue-600 border border-black shadow-lg lg:h-52 lg:max-w-sm shadow-gray-900">
-            <h3 class="text-xl font-medium text-center text-white md:text-2xl lg:text-3xl xl:text-4xl">Virginia</h3>
+    </div>
+
+    <div class="flex-grow px-4 py-6 overflow-auto lg:px-10 pt-[100px]">
+      <div class="max-w-screen-lg mx-auto">
+        <img src="images/explore.png" class="bg-black mb-6 max-w-full mx-auto max-h-[120px] md:max-w-sm lg:max-w-md" alt="explore logo" />
+    
+        <h2 class="mb-4 text-3xl font-normal text-center text-primary md:text-4xl xl:text-5xl">Homebuyer Discounts for Jaydip</h2>
+        <p class="text-lg text-black lg:text-xl">Thinking of buying a home now or in the future? Nomadic Tenants can get rebates through Explore, Nomadic Real Estate's sister company. Explore is a boutique real estate agency specialized in facilitating off-market deals within our network.</p>
+    
+        <div class="p-4 mt-10 border border-gray-400 shadow-inner md:px-6 lg:px-10 xl:px-14 md:py-8 bg-gray-50 shadow-gray-200">
+          <h2 class="mb-8 text-3xl font-normal text-center capitalize text-primary md:mb-12 xl:mb-16 md:text-4xl xl:text-5xl">calculate current rebate offer:</h2>
+    
+          <h2 class="mb-8 text-3xl font-bold text-center text-secondary md:mb-12 xl:mb-16 md:text-4xl xl:text-5xl">Where are you looking to buy?</h2>
+    
+          <div class="flex flex-col items-center mb-6 space-y-6 md:mb-10 lg:mb-14 xl:mb-20 sm:flex-row sm:items-stretch sm:justify-between sm:space-y-0 sm:space-x-6">
+            <!-- box 1 -->
+            <a href="#" class="flex items-center justify-center w-full h-40 max-w-xs p-2 text-white transition duration-300 ease-in-out border shadow-lg border-primary bg-primary hover:bg-white hover:text-primary lg:h-52 lg:max-w-sm hover:shadow-gray-900">
+              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl xl:text-3xl">Washington DC</h3>
+            </a>
+    
+            <!-- box 2 -->
+            <a href="#" class="flex items-center justify-center w-full h-40 max-w-xs p-2 text-white transition duration-300 ease-in-out border shadow-lg border-primary bg-primary hover:bg-white hover:text-primary lg:h-52 lg:max-w-sm hover:shadow-gray-900">
+              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl xl:text-3xl">Maryland</h3>
+            </a>
+    
+            <!-- box 3 -->
+            <a href="#" class="flex items-center justify-center w-full h-40 max-w-xs p-2 text-white transition duration-300 ease-in-out border shadow-lg border-primary bg-primary hover:bg-white hover:text-primary lg:h-52 lg:max-w-sm hover:shadow-gray-900">
+              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl xl:text-3xl">Virginia</h3>
+            </a>
           </div>
         </div>
       </div>
     </div>
+    <!-- main screen -->
   </div>
-  
-      
+
 </body>
 </html>

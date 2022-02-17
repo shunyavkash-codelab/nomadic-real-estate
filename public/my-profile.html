@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomadic Real Estate</title>
+
+  <!-- line icons CDN -->
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+  <link href="css/app.css" rel="stylesheet">
+</head>
+
+
+<body class="flex h-screen">
+  <!-- sidebar div -->
+  <div class="flex flex-col flex-shrink-0 w-full max-w-xs px-6 py-10 bg-primary">
+    <a href="javascript:void(0);" class="flex-shrink-0 block mb-10">
+      <img src="images/logo.png" alt="" class="w-auto mx-auto" />
+    </a>
+
+    <ul class="flex-grow p-0 m-0 mb-10 overflow-auto text-base tracking-wide md:text-lg">
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-home"></i>
+          <span class="flex-grow pl-3 truncate">dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-briefcase"></i>
+          <span class="flex-grow pl-3 truncate">rent / banking</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-user-friends"></i>
+          <span class="flex-grow pl-3 truncate">work orders</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-calendar-alt"></i>
+          <span class="flex-grow pl-3 truncate">calendare</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-comment"></i>
+          <span class="flex-grow pl-3 truncate">communication</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-building"></i>
+          <span class="flex-grow pl-3 truncate">homebuyer discounts</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-user-circle"></i>
+          <span class="flex-grow pl-3 truncate">my profile</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="flex-shrink-0 p-0 m-0 text-base tracking-wide md:text-lg">
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-question-circle"></i>
+          <span class="flex-grow pl-3 truncate">get profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
+          <i class="text-3xl las la-cog"></i>
+          <span class="flex-grow pl-3 truncate">logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- END sidebar div -->
+
+  <!-- main screen -->
+  <div class="relative flex flex-col flex-grow overflow-auto">
+    <div class="absolute top-0 left-0 flex-shrink-0 w-full p-4 text-right bg-white lg:px-10">
+      <button
+        class="p-2 text-gray-400 transition duration-300 ease-linear bg-transparent rounded-full appearance-none top-4 md:top-10 right-4 md:right-10 hover:bg-primary md:p-3 hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lg:w-7 lg:h-7" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+          <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex-grow px-4 py-6 overflow-auto lg:px-10 pt-[100px]">
+      <div class="w-full max-w-screen-md mx-auto">
+
+        <div class="mb-10 text-center ">
+          <div class="flex-shrink-0 w-16 h-16 mx-auto overflow-hidden bg-white border border-secondary md:w-32 md:h-32 md:border-2">
+            <img src="images/male-placeholder.jpeg" alt="placeholder image" />
+          </div>
+          <label class="block py-1 capitalize cursor-pointer lg:text-lg text-secondary">
+            <input type="file" placeholder="upload photo" class="hidden" />
+            <span class="border-b border-secondary">upload photo</span>
+          </label>
+          <h2 class="block mt-4 mb-2 text-2xl font-semibold capitalize text-primary md:text-3xl lg:text-4xl">jaydip suvagiya</h2>
+        </div>
+
+        <ul class="space-y-2 text-xl md:space-y-4 lg:space-y-6 md:text-2xl lg:text-3xl ">
+          <li class="flex">
+            <span class="flex-shrink-0 block text-3xl cursor-pointer w-11 text-secondary">
+              <i class="las la-pen"></i>
+            </span>
+            <div class="flex-shrink-0 pr-3 font-semibold capitalize text-primary">
+              email:
+            </div>
+            <div class="flex-grow text-black">
+              nomad.renter@mailinator.com
+            </div>
+          </li>
+
+          <li class="flex">
+            <span class="flex-shrink-0 block text-3xl cursor-pointer w-11 text-secondary">
+              <i class="las la-pen"></i>
+            </span>
+            <div class="flex-shrink-0 pr-3 font-semibold capitalize text-primary">
+              phone:
+            </div>
+            <div class="flex-grow text-black">
+              202-223-9019
+            </div>
+          </li>
+          
+          <li class="flex">
+            <span class="flex-shrink-0 block text-3xl cursor-pointer w-11 text-secondary">
+              
+            </span>
+            <div class="flex-shrink-0 pr-3 font-semibold capitalize text-primary">
+              address:
+            </div>
+            <div class="flex-grow text-black">
+              123 Main Street Washington, DC 20005
+            </div>
+          </li>
+          
+          <li class="flex">
+            <span class="flex-shrink-0 block text-3xl cursor-pointer w-11 text-secondary">
+              
+            </span>
+            <div class="flex-shrink-0 pr-3 font-semibold capitalize text-primary">
+              Lease Expires:
+            </div>
+            <div class="flex-grow text-black">
+               6/1/2022
+            </div>
+          </li>
+          
+          <li class="flex">
+            <span class="flex-shrink-0 block text-3xl cursor-pointer w-11 text-secondary">
+              
+            </span>
+            <div class="flex-shrink-0 pr-3 font-semibold capitalize text-primary">
+              Monthly Rent:
+            </div>
+            <div class="flex-grow text-black">
+              $3,500.00
+            </div>
+          </li>
+
+
+          <li class="flex">
+            <span class="flex-shrink-0 block text-3xl cursor-pointer w-11 text-secondary">
+              
+            </span>
+            <div class="flex flex-col flex-grow font-semibold capitalize text-primary">
+              Household:
+
+              <div class="flex items-center mt-3 space-x-4 text-xl font-normal text-black capitalize lg:space-x-8 md:text-2xl lg:text-3xl">
+                <div class="flex items-center space-x-3">
+                  <div class="w-10 h-10 border md:w-12 md:h-12 border-secondary">
+                    <img src="images/male-placeholder.jpeg" alt="placeholder image" />
+                  </div>
+                  <span>Jaydip Suvagiya</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div class="w-10 h-10 border md:w-12 md:h-12 border-secondary">
+                    <img src="images/male-placeholder.jpeg" alt="placeholder image" />
+                  </div>
+                  <span>Jane Doe</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+  
+      </div>
+
+    </div>
+    <!-- main screen -->
+  </div>
+
+</body>
+
+</html>
