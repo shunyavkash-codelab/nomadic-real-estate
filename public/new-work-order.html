@@ -109,73 +109,54 @@
 
     <div class="flex-grow px-4 py-6 overflow-auto lg:px-10 pt-[100px]">
       <div class="w-full max-w-screen-lg mx-auto">
-        <div class="flex flex-wrap justify-between mb-6 md:mb-8">
-          <h2 class="text-2xl font-semibold capitalize md:text-3xl lg:text-4xl">work orders</h2>
-          <a href="new-work-order.html"
-            class="px-4 md:px-6 xl:px-8 py-2.5 bg-primary hover:bg-transparent hover:text-primary text-base lg:text-lg capitalize border border-primary text-white font-normal cursor-pointer transition duration-300 ease-in-out tracking-wide">
-            new work order
-          </a>
+        <div class="pb-4 mb-8 border-b border-gray-200 md:mb-10">
+          <h2 class="mb-2 text-2xl font-semibold capitalize md:text-3xl lg:text-4xl">work orders</h2>
+          <p class="text-base text-gray-400 md:text-lg">Fill out the form below and we'll get in touch with you as soon
+            as possible
+          </p>
         </div>
 
-        <!-- This example requires Tailwind CSS v2.0+ -->
-        <div class="flex flex-col">
-          <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-              <div class="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg">
-                <div class="px-6 py-4 bg-gray-100">
-                  <div class="max-w-[200px] flex">
-                    <select id="location" name="location" class="block w-full py-1.5 px-3 text-base capitalize border border-black rounded-l-md appearance-none cursor-pointer focus:outline-none focus:ring-primary focus:border-primary sm:text-sm">
-                      <option>in progress</option>
-                      <option selected>active</option>
-                      <option>pending</option>
-                    </select>
-                    <button class="flex-shrink-0 w-8 text-black bg-gray-300 border border-l-0 border-black rounded-r-md">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </button>
-                  </div>
-
-                </div>
-                <table class="min-w-full text-base text-black">
-                  <tbody class="divide-y divide-gray-200 ">
-                    <!-- Odd row -->
-                    <tr class="bg-white">
-                      <td class="px-6 py-4 font-medium lg:text-xl whitespace-nowrap">
-                        <span class="font-semibold">Title:</span> Garbage Disposal Broken
-                      </td>
-                      <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="font-semibold">Submitted:</span>  11/05/21
-                      </td>
-                      <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="font-semibold">Submitted:</span>  11/05/21
-                      </td>
-                      <td class="px-6 py-4 font-medium text-right whitespace-nowrap">
-                        <a href="#" class="px-4 py-2 text-base font-normal tracking-wide text-white capitalize transition duration-300 ease-in-out border cursor-pointer md:px-6 bg-secondary hover:bg-transparent hover:text-secondary border-secondary">Edit</a>
-                      </td>
-                    </tr>
-
-                    <!-- Odd row -->
-                    <tr class="bg-white">
-                      <td class="px-6 py-4 font-medium lg:text-xl whitespace-nowrap">
-                        <span class="font-semibold">Title:</span> Garbage Disposal Broken
-                      </td>
-                      <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="font-semibold">Submitted:</span>  11/05/21
-                      </td>
-                      <td class="px-6 py-4 whitespace-nowrap">
-                        <span class="font-semibold">Submitted:</span>  11/05/21
-                      </td>
-                      <td class="px-6 py-4 font-medium text-right whitespace-nowrap">
-                        <a href="#" class="px-4 py-2 text-base font-normal tracking-wide text-white capitalize transition duration-300 ease-in-out border cursor-pointer md:px-6 bg-secondary hover:bg-transparent hover:text-secondary border-secondary">Edit</a>
-                      </td>
-                    </tr>
-                    <!-- More people... -->
-                  </tbody>
-                </table>
-              </div>
+        <div class="border-b border-gray-200 divide-y divide-gray-200">
+          <div class="flex flex-col py-4 border-t border-gray-200 md:py-6 md:items-center md:flex-row">
+            <label class="flex-shrink-0 w-64 tracking-wide text-black capitalize">
+              category
+            </label>
+            <div class="flex-grow">
+              <select id="location" name="location"
+                class="block w-full max-w-xs py-2 pl-3 pr-10 mt-1 text-base capitalize border border-gray-300 rounded-md cursor-pointer focus:outline-none focus:ring-primary focus:border-primary">
+                <option>plumbing</option>
+                <option>machine</option>
+                <option>furniture</option>
+              </select>
             </div>
           </div>
+
+          <div class="flex flex-col py-4 border-t border-gray-200 md:py-6 md:items-center md:flex-row">
+            <label class="flex-shrink-0 w-64 tracking-wide text-black capitalize">
+              title
+            </label>
+            <div class="flex-grow">
+                <input type="text" name="text" id="text" class="block w-full max-w-xl py-2 pl-3 pr-10 mt-1 text-base capitalize border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary" placeholder="">
+            </div>
+          </div>
+
+          <div class="flex flex-col py-4 border-t border-gray-200 md:py-6 md:flex-row">
+            <label class="flex-shrink-0 w-64 tracking-wide text-black capitalize">
+              notes
+            </label>
+            <div class="flex-grow">
+              <textarea class="block w-full max-w-xl py-2 pl-3 pr-10 mt-1 text-base capitalize border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary" rows="3" placeholder=""></textarea>
+              <p class="mt-2 text-base text-gray-400">Please provide as much information as possible. Thanks!</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end py-4 space-x-4 md:py-6">
+          <a href="work-order.html" class="px-4 md:px-6 xl:px-8 py-2.5 hover:bg-primary bg-transparent text-primary text-base lg:text-lg capitalize border border-primary hover:text-white font-normal cursor-pointer transition duration-300 ease-in-out tracking-wide">
+            cancel
+          </a>
+          <a href="work-order.html" class="px-4 md:px-6 xl:px-8 py-2.5 bg-primary hover:bg-transparent hover:text-primary text-base lg:text-lg capitalize border border-primary text-white font-normal cursor-pointer transition duration-300 ease-in-out tracking-wide">
+            submit
+          </a>
         </div>
 
       </div>
