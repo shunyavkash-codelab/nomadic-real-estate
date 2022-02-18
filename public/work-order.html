@@ -17,56 +17,56 @@
 
 <body class="flex h-screen">
   <!-- sidebar div -->
-  <div class="flex flex-col flex-shrink-0 w-full max-w-xs px-6 py-10 bg-primary">
-    <a href="javascript:void(0);" class="flex-shrink-0 block mb-10">
+  <div class="flex flex-col flex-shrink-0 w-64 max-w-xs px-6 py-10 md:w-full bg-primary">
+    <a href="dashboard.html" class="flex-shrink-0 block mb-10">
       <img src="images/logo.png" alt="" class="w-auto mx-auto" />
     </a>
 
     <ul class="flex-grow p-0 m-0 mb-10 overflow-auto text-base tracking-wide md:text-lg">
       <li>
-        <a href="#"
+        <a href="dashboard.html"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
           <i class="text-3xl las la-home"></i>
           <span class="flex-grow pl-3 truncate">dashboard</span>
         </a>
       </li>
       <li>
-        <a href="#"
+        <a href="javascript:void(0);"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
           <i class="text-3xl las la-briefcase"></i>
           <span class="flex-grow pl-3 truncate">rent / banking</span>
         </a>
       </li>
       <li>
-        <a href="#"
+        <a href="work-order.html"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
           <i class="text-3xl las la-user-friends"></i>
           <span class="flex-grow pl-3 truncate">work orders</span>
         </a>
       </li>
       <li>
-        <a href="#"
+        <a href="javascript:void(0);"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
           <i class="text-3xl las la-calendar-alt"></i>
           <span class="flex-grow pl-3 truncate">calendare</span>
         </a>
       </li>
       <li>
-        <a href="#"
+        <a href="communication-history.html"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
           <i class="text-3xl las la-comment"></i>
           <span class="flex-grow pl-3 truncate">communication</span>
         </a>
       </li>
       <li>
-        <a href="#"
+        <a href="explore.html"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
           <i class="text-3xl las la-building"></i>
           <span class="flex-grow pl-3 truncate">homebuyer discounts</span>
         </a>
       </li>
       <li>
-        <a href="#"
+        <a href="my-profile.html"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
           <i class="text-3xl las la-user-circle"></i>
           <span class="flex-grow pl-3 truncate">my profile</span>
@@ -118,7 +118,7 @@
         </div>
 
         <!-- This example requires Tailwind CSS v2.0+ -->
-        <div class="flex flex-col">
+        <div class="flex flex-col" x-cloak x-data="{ open: false }">
           <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
               <div class="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg">
@@ -151,7 +151,7 @@
                         <span class="font-semibold">Submitted:</span>  11/05/21
                       </td>
                       <td class="px-6 py-4 font-medium text-right whitespace-nowrap">
-                        <a href="#" class="px-4 py-2 text-base font-normal tracking-wide text-white capitalize transition duration-300 ease-in-out border cursor-pointer md:px-6 bg-secondary hover:bg-transparent hover:text-secondary border-secondary">Edit</a>
+                        <a href="#" @click="open = true" class="px-4 py-2 text-base font-normal tracking-wide text-white capitalize transition duration-300 ease-in-out border cursor-pointer md:px-6 bg-secondary hover:bg-transparent hover:text-secondary border-secondary">Edit</a>
                       </td>
                     </tr>
 
@@ -167,12 +167,22 @@
                         <span class="font-semibold">Submitted:</span>  11/05/21
                       </td>
                       <td class="px-6 py-4 font-medium text-right whitespace-nowrap">
-                        <a href="#" class="px-4 py-2 text-base font-normal tracking-wide text-white capitalize transition duration-300 ease-in-out border cursor-pointer md:px-6 bg-secondary hover:bg-transparent hover:text-secondary border-secondary">Edit</a>
+                        <a href="#" @click="open = true" class="px-4 py-2 text-base font-normal tracking-wide text-white capitalize transition duration-300 ease-in-out border cursor-pointer md:px-6 bg-secondary hover:bg-transparent hover:text-secondary border-secondary">Edit</a>
                       </td>
                     </tr>
                     <!-- More people... -->
                   </tbody>
                 </table>
+              </div>
+
+              <div class="fixed top-0 left-0 flex items-center justify-center w-full h-full" x-show="open">
+                  <div @click="open = false" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-30"></div>
+                  <div class="relative z-10 max-w-screen-lg bg-white border border-gray-200">
+                    <a href="javascript:void(0);" @click="open = false" class="absolute inline-block px-3 py-2 text-2xl top-2 md:text-3xl text-secondary right-2">
+                      <i class="las la-times"></i>
+                    </a>
+                    <img src="images/work-order-pdf.png" class="w-full max-w-screen-md" alt="image" />
+                  </div>
               </div>
             </div>
           </div>
@@ -184,6 +194,6 @@
     <!-- main screen -->
   </div>
 
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
-
 </html>
