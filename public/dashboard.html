@@ -29,7 +29,7 @@
             <i class="las la-times"></i>
         </button>
   </div>
-  <div x-show="menu" class="absolute top-0 left-0 z-50 flex flex-col flex-shrink-0 w-full h-full max-w-xs px-6 py-10 overflow-auto md:z-40 lg:relative sidebar-menu bg-primary"
+  <div x-show="menu" class="absolute top-0 left-0 z-50 flex flex-col flex-shrink-0 h-full px-6 py-10 overflow-auto w-72 md:z-40 lg:relative sidebar-menu bg-primary"
     x-transition:enter="transform transition ease-in-out duration-500 sm:duration-300"
     x-transition:enter-start="-translate-x-full"
     x-transition:enter-end="translate-x-0"
@@ -38,73 +38,73 @@
     x-transition:leave-end="-translate-x-full"
   >
     <a href="dashboard.html" class="flex-shrink-0 block mb-10">
-      <img src="images/logo.png" alt="" class="w-auto mx-auto" />
+      <img src="images/logo.png" alt="" class="w-full" />
     </a>
 
-    <ul class="flex-grow p-0 m-0 mb-10 overflow-auto text-base tracking-wide md:text-lg">
+    <ul class="flex-grow p-0 m-0 mb-10 overflow-auto text-base tracking-wide">
       <li>
         <a href="dashboard.html"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
-          <i class="text-3xl las la-home"></i>
+          <i class="text-2xl lg:text-3xl las la-home"></i>
           <span class="flex-grow pl-3 truncate">dashboard</span>
         </a>
       </li>
       <li>
         <a href="javascript:void(0);"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
-          <i class="text-3xl las la-briefcase"></i>
+          <i class="text-2xl lg:text-3xl las la-briefcase"></i>
           <span class="flex-grow pl-3 truncate">rent / banking</span>
         </a>
       </li>
       <li>
         <a href="work-order.html"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
-          <i class="text-3xl las la-user-friends"></i>
+          <i class="text-2xl lg:text-3xl las la-user-friends"></i>
           <span class="flex-grow pl-3 truncate">work orders</span>
         </a>
       </li>
       <li>
         <a href="javascript:void(0);"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
-          <i class="text-3xl las la-calendar-alt"></i>
+          <i class="text-2xl lg:text-3xl las la-calendar-alt"></i>
           <span class="flex-grow pl-3 truncate">calendare</span>
         </a>
       </li>
       <li>
         <a href="communication-history.html"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
-          <i class="text-3xl las la-comment"></i>
+          <i class="text-2xl lg:text-3xl las la-comment"></i>
           <span class="flex-grow pl-3 truncate">communication</span>
         </a>
       </li>
       <li>
         <a href="explore.html"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
-          <i class="text-3xl las la-building"></i>
+          <i class="text-2xl lg:text-3xl las la-building"></i>
           <span class="flex-grow pl-3 truncate">homebuyer discounts</span>
         </a>
       </li>
       <li>
         <a href="my-profile.html"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
-          <i class="text-3xl las la-user-circle"></i>
+          <i class="text-2xl lg:text-3xl las la-user-circle"></i>
           <span class="flex-grow pl-3 truncate">my profile</span>
         </a>
       </li>
     </ul>
 
-    <ul class="flex-shrink-0 p-0 m-0 text-base tracking-wide md:text-lg">
+    <ul class="flex-shrink-0 p-0 m-0 text-base tracking-wide">
       <li>
         <a href="#"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
-          <i class="text-3xl las la-question-circle"></i>
+          <i class="text-2xl lg:text-3xl las la-question-circle"></i>
           <span class="flex-grow pl-3 truncate">get profile</span>
         </a>
       </li>
       <li>
         <a href="#"
           class="flex items-center w-full py-2 text-white capitalize transition duration-300 ease-in-out hover:text-secondary">
-          <i class="text-3xl las la-cog"></i>
+          <i class="text-2xl lg:text-3xl las la-cog"></i>
           <span class="flex-grow pl-3 truncate">logout</span>
         </a>
       </li>
@@ -205,15 +205,15 @@
 
       <!-- third section -->
 
-      <div x-data="{ ticketmodal: true }" class="flex flex-col items-center p-4 space-y-6 border border-gray-400 shadow-inner md:px-6 lg:px-10 xl:px-14 md:py-8 sm:flex-row sm:items-stretch sm:justify-between shadow-gray-200 sm:space-y-0 sm:space-x-6">
+      <div x-data="{ ticketmodal: false }" class="flex flex-col items-center p-4 space-y-6 border border-gray-400 shadow-inner md:px-6 lg:px-10 xl:px-14 md:py-8 sm:flex-row sm:items-stretch sm:justify-between shadow-gray-200 sm:space-y-0 sm:space-x-6">
         <!-- box 1 -->
         <a href="javascript:void(0);" class="w-full max-w-xs px-2 py-10 text-white transition duration-300 ease-in-out border border-black shadow-lg bg-primary hover:bg-white lg:px-4 hover:shadow-gray-900 hover:text-primary">
           <h2
-            class="mb-6 text-xl font-medium text-center capitalize md:mb-8 lg:text-2xl">
+            class="mb-5 text-xl font-medium text-center capitalize lg:mb-8 lg:text-2xl">
             live chat</h2>
 
           <svg xmlns="http://www.w3.org/2000/svg"
-            class="w-12 h-12 mx-auto text-secondary md:h-14 md:w-14 lg:h-20 lg:w-20" viewBox="0 0 20 20"
+            class="w-10 h-10 mx-auto text-secondary lg:h-16 lg:w-16" viewBox="0 0 20 20"
             fill="currentColor">
             <path fill-rule="evenodd"
               d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
@@ -224,11 +224,11 @@
         <!-- box 2 -->
         <a @click="ticketmodal = true" href="javascript:void(0);" class="w-full max-w-xs px-2 py-10 text-white transition duration-300 ease-in-out border border-black shadow-lg bg-primary hover:bg-white lg:px-4 hover:shadow-gray-900 hover:text-primary">
           <h2
-            class="mb-6 text-xl font-medium text-center capitalize md:mb-8 lg:text-2xl">
+            class="mb-5 text-xl font-medium text-center capitalize lg:mb-8 lg:text-2xl">
             submit a ticket</h2>
 
           <svg xmlns="http://www.w3.org/2000/svg"
-            class="w-12 h-12 mx-auto text-secondary md:h-14 md:w-14 lg:h-20 lg:w-20" viewBox="0 0 20 20"
+            class="w-10 h-10 mx-auto text-secondary lg:h-16 lg:w-16" viewBox="0 0 20 20"
             fill="currentColor">
             <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
@@ -238,11 +238,11 @@
         <!-- box 3 -->
         <a href="javascript:void(0);" class="w-full max-w-xs px-2 py-10 text-white transition duration-300 ease-in-out border border-black shadow-lg bg-primary hover:bg-white lg:px-4 hover:shadow-gray-900 hover:text-primary">
           <h2
-            class="mb-6 text-xl font-medium text-center capitalize md:mb-8 lg:text-2xl">
+            class="mb-5 text-xl font-medium text-center capitalize lg:mb-8 lg:text-2xl">
             call us</h2>
 
           <svg xmlns="http://www.w3.org/2000/svg"
-            class="w-12 h-12 mx-auto text-secondary md:h-14 md:w-14 lg:h-20 lg:w-20" viewBox="0 0 20 20"
+            class="w-10 h-10 mx-auto text-secondary lg:h-16 lg:w-16" viewBox="0 0 20 20"
             fill="currentColor">
             <path
               d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -253,7 +253,7 @@
 
         <!-- submit a ticket modal -->
 
-          <div x-show="ticketmodal" @click="ticketmodal = false" class="fixed top-0 left-0 z-40 w-full h-full bg-black bg-opacity-30 !m-0"
+          <div x-cloak x-show="ticketmodal" @click="ticketmodal = false" class="fixed top-0 left-0 z-40 w-full h-full bg-black bg-opacity-60 !m-0"
             x-on:click.prevent="open = false"
             x-transition:enter="transform transition ease-in-out duration-500 sm:duration-300"
             x-transition:enter-start="opacity-0"
@@ -263,7 +263,7 @@
             x-transition:leave-end="opacity-0"
           ></div>
 
-          <div class="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full px-4 py-10 md:p-10 overflow-auto !m-0" x-show="ticketmodal"
+          <div x-cloak class="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full px-4 py-10 md:p-10 overflow-auto !m-0" x-show="ticketmodal"
             x-on:click.prevent="open = false"
             x-transition:enter="transform transition ease-in-out duration-500 sm:duration-300"
             x-transition:enter-start="opacity-0"
