@@ -231,17 +231,26 @@
 
         <!-- box 3 -->
         <a href="javascript:void(0);"
+          x-data= "{ callus: false }"
+          @click="callus = !callus"
           class="w-full max-w-xs px-2 py-10 text-white transition duration-300 ease-in-out border border-black shadow-lg bg-primary hover:bg-white lg:px-4 hover:shadow-gray-900 hover:text-primary">
           <h2 class="mb-5 text-xl font-medium text-center capitalize lg:mb-8 lg:text-2xl">
             call us</h2>
 
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto text-secondary lg:h-16 lg:w-16"
+          <svg x-bind:class="callus ? 'hidden' : ''"
+            xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto text-secondary lg:h-16 lg:w-16"
             viewBox="0 0 20 20" fill="currentColor">
             <path
               d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             <path
               d="M16.707 3.293a1 1 0 010 1.414L15.414 6l1.293 1.293a1 1 0 01-1.414 1.414L14 7.414l-1.293 1.293a1 1 0 11-1.414-1.414L12.586 6l-1.293-1.293a1 1 0 011.414-1.414L14 4.586l1.293-1.293a1 1 0 011.414 0z" />
           </svg>
+
+          <h3 class="text-lg font-bold text-center capitalize lg:text-xl" 
+              x-bind:class="callus ? '' : 'hidden'"
+          >
+            (202) 223-9019  
+          </h3>
         </a>
       </div>
     </div>
@@ -305,17 +314,26 @@
 
         <!-- box 3 -->
         <a href="javascript:void(0);"
+          x-data= "{ callus: false }"
+          @click="callus = !callus"
           class="w-full max-w-xs px-2 py-10 text-white transition duration-300 ease-in-out border border-black shadow-lg bg-primary hover:bg-white lg:px-4 hover:shadow-gray-900 hover:text-primary">
           <h2 class="mb-5 text-xl font-medium text-center capitalize lg:mb-8 lg:text-2xl">
             call us</h2>
 
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto text-secondary lg:h-16 lg:w-16"
+          <svg x-bind:class="callus ? 'hidden' : ''"
+            xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto text-secondary lg:h-16 lg:w-16"
             viewBox="0 0 20 20" fill="currentColor">
             <path
               d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             <path
               d="M16.707 3.293a1 1 0 010 1.414L15.414 6l1.293 1.293a1 1 0 01-1.414 1.414L14 7.414l-1.293 1.293a1 1 0 11-1.414-1.414L12.586 6l-1.293-1.293a1 1 0 011.414-1.414L14 4.586l1.293-1.293a1 1 0 011.414 0z" />
           </svg>
+
+          <h3 class="text-lg font-bold text-center capitalize lg:text-xl" 
+              x-bind:class="callus ? '' : 'hidden'"
+          >
+            (202) 223-9019  
+          </h3>
         </a>
 
       </div>
