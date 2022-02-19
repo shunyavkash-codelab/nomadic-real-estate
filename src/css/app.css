@@ -9,3 +9,7 @@ body{
 }
 
 [x-cloak] { display: none !important; }
+
+.sidebar-menu{
+    @apply lg:!block;
+}

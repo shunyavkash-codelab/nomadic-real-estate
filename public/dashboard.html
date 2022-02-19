@@ -14,9 +14,29 @@
   <link href="css/app.css" rel="stylesheet">
 </head>
 
-<body class="flex h-screen">
+<body class="flex h-screen" x-data="{ menu: false }">
   <!-- sidebar div -->
-  <div class="flex flex-col flex-shrink-0 w-full max-w-xs px-6 py-10 bg-primary">
+  <div x-show="menu" @click="menu = false" class="fixed top-0 left-0 z-40 w-full h-full bg-black bg-opacity-80"
+        x-on:click.prevent="open = false"
+        x-transition:enter="transform transition ease-in-out duration-500 sm:duration-300"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transform transition ease-in-out duration-500 sm:duration-300"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+  >
+        <button class="block w-full p-6 text-3xl text-4xl text-right text-white">
+            <i class="las la-times"></i>
+        </button>
+  </div>
+  <div x-show="menu" class="absolute top-0 left-0 z-50 flex flex-col flex-shrink-0 w-full h-full max-w-xs px-6 py-10 lg:relative sidebar-menu bg-primary"
+    x-transition:enter="transform transition ease-in-out duration-500 sm:duration-300"
+    x-transition:enter-start="-translate-x-full"
+    x-transition:enter-end="translate-x-0"
+    x-transition:leave="transform transition ease-in-out duration-500 sm:duration-300"
+    x-transition:leave-start="translate-x-0"
+    x-transition:leave-end="-translate-x-full"
+  >
     <a href="dashboard.html" class="flex-shrink-0 block mb-10">
       <img src="images/logo.png" alt="" class="w-auto mx-auto" />
     </a>
@@ -94,7 +114,11 @@
 
   <!-- main screen -->
   <div class="relative flex flex-col flex-grow overflow-auto">
-    <div class="absolute top-0 left-0 flex-shrink-0 w-full p-4 text-right bg-white lg:px-10">
+    <div class="absolute top-0 left-0 flex items-center justify-between flex-shrink-0 w-full p-4 bg-white lg:justify-end lg:px-10">
+      <a @click="menu = !menu"
+        href="javascript:void(0);" class="inline-block text-3xl lg:hidden text-primary">
+        <i class="las la-bars"></i>
+      </a>
       <button class="p-2 text-gray-400 transition duration-300 ease-linear bg-transparent rounded-full appearance-none top-4 md:top-10 right-4 md:right-10 hover:bg-primary md:p-3 hover:text-white">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lg:w-7 lg:h-7" viewBox="0 0 24 24" stroke-width="2"
           stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -117,14 +141,14 @@
         </div>
 
         <div class="flex-grow pl-6 xl:pl-8">
-          <h2 class="block mb-2 text-2xl font-medium capitalize text-primary md:text-3xl lg:text-4xl">hello, jaydip</h2>
+          <h2 class="block mb-2 text-xl font-semibold capitalize text-primary md:text-2xl">hello, jaydip</h2>
           <div class="flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-secondary md:h-7 md:w-7" viewBox="0 0 20 20"
               fill="currentColor">
               <path
                 d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
             </svg>
-            <h3 class="ml-1.5 text-base md:text-xl lg:text-2xl text-gray-500 capitalize">123 main street
+            <h3 class="ml-1.5 text-base text-gray-500 capitalize">123 main street
             </h3>
           </div>
         </div>
@@ -134,7 +158,7 @@
         <!-- box 1 -->
         <div
           class="flex flex-col items-center justify-center px-4 py-10 space-y-4 bg-gray-100 border border-gray-400 md:space-y-6">
-          <h3 class="text-xl text-center capitalize text-primary lg:text-2xl">maintenance</h3>
+          <h3 class="text-base text-center capitalize md:text-lg text-primary lg:text-xl">maintenance</h3>
 
           <svg xmlns="http://www.w3.org/2000/svg" class="text-secondary w-14 h-14 md:h-16 md:w-16 lg:h-20 lg:w-20"
             viewBox="0 0 24 24" stroke-width="1.7" stroke="currentcolor" fill="none" stroke-linecap="round"
@@ -144,7 +168,7 @@
           </svg>
 
           <button
-            class="px-4 md:px-6 xl:px-8 py-2.5 bg-primary hover:bg-transparent hover:text-primary text-base lg:text-lg capitalize border border-primary text-white font-normal cursor-pointer transition duration-300 ease-in-out tracking-wide">
+            class="px-4 md:px-6 xl:px-8 py-2.5 bg-primary hover:bg-transparent hover:text-primary text-base capitalize border border-primary text-white font-normal cursor-pointer transition duration-300 ease-in-out tracking-wide">
             submit work order
             <button>
         </div>
@@ -153,7 +177,7 @@
         <!-- box 2 -->
         <div
           class="flex flex-col items-center justify-center px-4 py-10 space-y-4 bg-gray-100 border border-gray-400 md:space-y-6">
-          <h3 class="text-xl text-center capitalize text-primary lg:text-2xl">rent due: 2/1/2022</h3>
+          <h3 class="text-base text-center capitalize md:text-lg text-primary lg:text-xl">rent due: 2/1/2022</h3>
 
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 text-secondary w-14 md:h-16 md:w-16 lg:h-20 lg:w-20"
             viewBox="0 0 20 20" fill="currentColor">
@@ -165,7 +189,7 @@
           </svg>
 
           <button
-            class="px-4 md:px-6 xl:px-8 py-2.5 bg-primary hover:bg-transparent hover:text-primary text-base lg:text-lg capitalize border border-primary text-white font-normal cursor-pointer transition duration-300 ease-in-out tracking-wide">
+            class="px-4 md:px-6 xl:px-8 py-2.5 bg-primary hover:bg-transparent hover:text-primary text-base capitalize border border-primary text-white font-normal cursor-pointer transition duration-300 ease-in-out tracking-wide">
             manage payments
             <button>
         </div>
@@ -184,9 +208,9 @@
       <div
         class="flex flex-col items-center p-4 space-y-6 border border-gray-400 shadow-inner md:px-6 lg:px-10 xl:px-14 md:py-8 sm:flex-row sm:items-stretch sm:justify-between shadow-gray-200 sm:space-y-0 sm:space-x-6">
         <!-- box 1 -->
-        <div class="w-full max-w-xs px-2 py-10 border border-black shadow-lg bg-primary lg:px-4 shadow-gray-500">
+        <a href="javascript:void(0);" class="w-full max-w-xs px-2 py-10 text-white transition duration-300 ease-in-out border border-black shadow-lg bg-primary hover:bg-white lg:px-4 hover:shadow-gray-900 hover:text-primary">
           <h2
-            class="mb-6 text-xl font-medium text-center text-white capitalize md:mb-8 md:text-2xl lg:text-3xl xl:text-4xl">
+            class="mb-6 text-xl font-medium text-center capitalize md:mb-8 lg:text-2xl">
             live chat</h2>
 
           <svg xmlns="http://www.w3.org/2000/svg"
@@ -196,12 +220,12 @@
               d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
               clip-rule="evenodd" />
           </svg>
-        </div>
+        </a>
 
         <!-- box 2 -->
-        <div class="w-full max-w-xs px-2 py-10 border border-black shadow-lg bg-primary lg:px-4 shadow-gray-500">
+        <a href="javascript:void(0);" class="w-full max-w-xs px-2 py-10 text-white transition duration-300 ease-in-out border border-black shadow-lg bg-primary hover:bg-white lg:px-4 hover:shadow-gray-900 hover:text-primary">
           <h2
-            class="mb-6 text-xl font-medium text-center text-white capitalize md:mb-8 md:text-2xl lg:text-3xl xl:text-4xl">
+            class="mb-6 text-xl font-medium text-center capitalize md:mb-8 lg:text-2xl">
             submit a ticket</h2>
 
           <svg xmlns="http://www.w3.org/2000/svg"
@@ -210,12 +234,12 @@
             <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
           </svg>
-        </div>
+        </a>
 
         <!-- box 3 -->
-        <div class="w-full max-w-xs px-2 py-10 border border-black shadow-lg bg-primary lg:px-4 shadow-gray-500">
+        <a href="javascript:void(0);" class="w-full max-w-xs px-2 py-10 text-white transition duration-300 ease-in-out border border-black shadow-lg bg-primary hover:bg-white lg:px-4 hover:shadow-gray-900 hover:text-primary">
           <h2
-            class="mb-6 text-xl font-medium text-center text-white capitalize md:mb-8 md:text-2xl lg:text-3xl xl:text-4xl">
+            class="mb-6 text-xl font-medium text-center capitalize md:mb-8 lg:text-2xl">
             call us</h2>
 
           <svg xmlns="http://www.w3.org/2000/svg"
@@ -226,12 +250,12 @@
             <path
               d="M16.707 3.293a1 1 0 010 1.414L15.414 6l1.293 1.293a1 1 0 01-1.414 1.414L14 7.414l-1.293 1.293a1 1 0 11-1.414-1.414L12.586 6l-1.293-1.293a1 1 0 011.414-1.414L14 4.586l1.293-1.293a1 1 0 011.414 0z" />
           </svg>
-        </div>
+        </a>
       </div>
     </div>
     <!-- main screen -->
   </div>
 
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>  
 </body>
-
 </html>
