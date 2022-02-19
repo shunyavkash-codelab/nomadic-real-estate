@@ -15,7 +15,7 @@
 </head>
 
 <body class="flex h-screen"
-  x-data="{ menu: false, ticketmodal: false, gethelp: false, propertyware: false, tutorial: false, orderedit: true }">
+  x-data="{ menu: false, ticketmodal: false, gethelp: false, propertyware: false, tutorial: false, orderedit: false }">
   <!-- sidebar div -->
   <div x-show="menu" @click="menu = false" class="fixed top-0 left-0 z-40 w-full h-full bg-black bg-opacity-80"
     x-on:click.prevent="open = false" x-transition:enter="transform transition ease-in-out duration-500 sm:duration-300"

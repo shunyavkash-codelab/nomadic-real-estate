@@ -13,3 +13,22 @@ body{
 .sidebar-menu{
     @apply lg:!flex;
 }
+
+
+input.price-range[type=range]{
+    -webkit-appearance: none;
+}
+
+input.price-range[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    @apply h-1 border-none rounded-md bg-primary; 
+}
+
+input.price-range[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @apply w-10 h-10 transform -translate-y-1/2 border rounded-full cursor-pointer bg-secondary border-primary;
+}
+
+input.price-range[type=range]:focus {
+    outline: none;
+}
