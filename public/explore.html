@@ -123,47 +123,182 @@
       </button>
     </div>
 
-    <div class="flex-grow px-4 py-6 overflow-auto lg:px-10 pt-[100px]">
+    <div class="flex-grow px-4 py-6 overflow-auto lg:px-10 pt-[100px]" x-data="{ currentTab : 'five'}">
       <div class="max-w-screen-lg mx-auto">
-        <img src="images/explore.png" class="bg-black mb-6 max-w-full mx-auto max-h-[120px] md:max-w-sm lg:max-w-md"
+        <img src="images/explore.png" class="bg-black mb-6 max-w-xs mx-auto max-h-[120px]"
           alt="explore logo" />
 
-        <h2 class="mb-4 text-3xl font-normal text-center text-primary md:text-4xl xl:text-5xl">Homebuyer Discounts for
+        <h2 class="mb-4 text-3xl font-normal text-center text-primary md:text-4xl">Homebuyer Discounts for
           Jaydip</h2>
         <p class="text-lg text-black lg:text-xl">Thinking of buying a home now or in the future? Nomadic Tenants can get
           rebates through Explore, Nomadic Real Estate's sister company. Explore is a boutique real estate agency
           specialized in facilitating off-market deals within our network.</p>
 
-        <div
+          <!-- home buyer step 1 -->
+        <div x-show="currentTab === 'one' " 
           class="p-4 mt-10 border border-gray-400 shadow-inner md:px-6 lg:px-10 xl:px-14 md:py-8 bg-gray-50 shadow-gray-200">
           <h2
-            class="mb-8 text-3xl font-normal text-center capitalize text-primary md:mb-12 xl:mb-16 md:text-4xl xl:text-5xl">
+            class="mb-8 text-3xl font-normal text-center capitalize text-primary md:mb-12 md:text-4xl">
             calculate current rebate offer:</h2>
 
-          <h2 class="mb-8 text-3xl font-bold text-center text-secondary md:mb-12 xl:mb-16 md:text-4xl xl:text-5xl">Where
+          <h2 class="mb-8 text-3xl font-bold text-center text-secondary md:mb-12 md:text-4xl">Where
             are you looking to buy?</h2>
 
           <div
-            class="flex flex-col items-center mb-6 space-y-6 md:mb-10 lg:mb-14 xl:mb-20 sm:flex-row sm:items-stretch sm:justify-between sm:space-y-0 sm:space-x-6">
+            class="flex flex-col items-center mb-6 space-y-6 md:mb-10 sm:flex-row sm:items-stretch sm:justify-between sm:space-y-0 sm:space-x-6">
             <!-- box 1 -->
             <a href="#"
+                @click="currentTab = 'two' "
               class="flex items-center justify-center w-full h-40 max-w-xs p-2 text-white transition duration-300 ease-in-out border shadow-lg border-primary bg-primary hover:bg-white hover:text-primary lg:h-52 lg:max-w-sm hover:shadow-gray-900">
-              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl xl:text-3xl">Washington DC</h3>
+              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl">Washington DC</h3>
             </a>
 
             <!-- box 2 -->
             <a href="#"
+                @click="currentTab = 'two' "
               class="flex items-center justify-center w-full h-40 max-w-xs p-2 text-white transition duration-300 ease-in-out border shadow-lg border-primary bg-primary hover:bg-white hover:text-primary lg:h-52 lg:max-w-sm hover:shadow-gray-900">
-              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl xl:text-3xl">Maryland</h3>
+              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl">Maryland</h3>
             </a>
 
             <!-- box 3 -->
             <a href="#"
+                @click="currentTab = 'two' "
               class="flex items-center justify-center w-full h-40 max-w-xs p-2 text-white transition duration-300 ease-in-out border shadow-lg border-primary bg-primary hover:bg-white hover:text-primary lg:h-52 lg:max-w-sm hover:shadow-gray-900">
-              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl xl:text-3xl">Virginia</h3>
+              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl">Virginia</h3>
             </a>
           </div>
         </div>
+        <!-- END home buyer step 1 -->
+
+        <!-- END home buyer step 2 -->
+        <div x-show="currentTab === 'two' " 
+          class="p-4 mt-10 border border-gray-400 shadow-inner md:px-6 lg:px-10 xl:px-14 md:py-8 bg-gray-50 shadow-gray-200">
+          <h2
+            class="mb-8 text-3xl font-normal text-center capitalize text-primary md:mb-12 md:text-4xl">
+            calculate current rebate offer:</h2>
+
+          <h2 class="mb-8 text-3xl font-bold text-center text-secondary md:mb-12 md:text-4xl">Where
+            What type of property?
+          </h2>
+
+          <div
+            class="flex flex-col items-center mb-6 space-y-6 md:mb-10 sm:flex-row sm:items-stretch sm:justify-between sm:space-y-0 sm:space-x-6">
+            <!-- box 1 -->
+            <a href="#"
+              @click="currentTab = 'three' "
+              class="flex items-center justify-center w-full h-40 max-w-xs p-2 text-white transition duration-300 ease-in-out border shadow-lg border-primary bg-primary hover:bg-white hover:text-primary lg:h-52 lg:max-w-sm hover:shadow-gray-900">
+              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl">Condo/Co-op</h3>
+            </a>
+
+            <!-- box 2 -->
+            <a href="#"
+              @click="currentTab = 'three' "
+              class="flex items-center justify-center w-full h-40 max-w-xs p-2 text-white transition duration-300 ease-in-out border shadow-lg border-primary bg-primary hover:bg-white hover:text-primary lg:h-52 lg:max-w-sm hover:shadow-gray-900">
+              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl">
+                Single Family
+              </h3>
+            </a>
+
+            <!-- box 3 -->
+            <a href="#"
+              @click="currentTab = 'three' "
+              class="flex items-center justify-center w-full h-40 max-w-xs p-2 text-white transition duration-300 ease-in-out border shadow-lg border-primary bg-primary hover:bg-white hover:text-primary lg:h-52 lg:max-w-sm hover:shadow-gray-900">
+              <h3 class="text-xl font-medium tracking-wide text-center md:text-2xl">
+                Multifamily
+              </h3>
+            </a>
+          </div>
+        </div>
+        <!-- END home buyer step 2 -->
+
+        <!-- END home buyer step 3 -->        
+        <div x-show="currentTab === 'three' " 
+          class="p-4 mt-10 border border-gray-400 shadow-inner md:px-6 lg:px-10 xl:px-14 md:py-8 bg-gray-50 shadow-gray-200">
+          <h2
+            class="mb-8 text-3xl font-normal text-center capitalize text-primary md:mb-12 md:text-4xl">
+            calculate current rebate offer:</h2>
+
+          <h2 class="mb-8 text-3xl font-bold text-center text-secondary md:mb-12 md:text-4xl">
+            What's your approximate budget?
+          </h2>
+            
+          <a href="javascript:void(0);" 
+          @click="currentTab = 'four' "
+          class="px-4 md:px-6 xl:px-8 py-2.5 bg-primary hover:bg-transparent hover:text-primary text-base lg:text-lg capitalize border border-primary text-white font-normal cursor-pointer transition duration-300 ease-in-out tracking-wide">
+            SEE REBATE OFFER
+          </a>
+            
+        </div>
+        <!-- END home buyer step 3 -->        
+
+        <!-- END home buyer step 4 -->        
+        <div x-show="currentTab === 'four' " 
+          class="p-4 mt-10 border border-gray-400 shadow-inner md:px-6 lg:px-10 xl:px-14 md:py-8 bg-gray-50 shadow-gray-200">
+          <h2 class="mb-8 text-3xl font-normal text-center capitalize text-primary md:text-4xl">
+            Your Current Rebate Offer: <span class="font-bold text-secondary">$4,500</span></h2>
+
+          <div class="space-y-4">
+            <p class="lg:text-lg">Based on the search parameters you entered on 1/19/2022, your rebate offer is $4,500 if you purchase a property through Explore (Nomadic Real Estate Broker Services).</p>
+
+            <p class="lg:text-lg">The rebate is paid out within one week after settlement, when you use a sales agent from Nomadic Real Estate Broker Services. </p>
+            
+            <h2 class="!my-6 text-2xl font-normal text-center capitalize text-primary md:text-3xl">
+              This rebate is valid until 3/31/2022:</h2>
+            
+            <p class="lg:text-lg">This amount will be honored for any Buyer Agency Agreements signed with Nomadic Real Estate Broker Services on or before 3/31/2022.</p>
+
+            <div class="flex justify-around !mt-6 lg:!mt-10">
+              <a href="javascript:void(0);" @click="currentTab = 'five' " class="px-4 md:px-6 xl:px-8 py-2.5 bg-primary hover:bg-transparent hover:text-primary text-base lg:text-lg capitalize border border-primary text-white font-normal cursor-pointer transition duration-300 ease-in-out tracking-wide">
+                Save Rebate
+              </a>
+
+              <a href="javascript:void(0);" @click="currentTab = 'six' " class="px-4 md:px-6 xl:px-8 py-2.5 bg-primary hover:bg-transparent hover:text-primary text-base lg:text-lg capitalize border border-primary text-white font-normal cursor-pointer transition duration-300 ease-in-out tracking-wide">
+                Contact Broker
+              </a>
+            </div>
+          </div>
+        
+        </div>
+        <!-- END home buyer step 4 -->        
+
+
+        <!-- END home buyer step 5 -->        
+        <div x-show="currentTab === 'five' " >
+          <div class="flex items-center px-4 py-2 mt-4 text-green-800 border border-secondary border-opacity-30 bg-secondary bg-opacity-20">
+            <i class="text-3xl las la-check-circle"></i>
+            <span class="flex-grow px-4">Rebate Saved! You can access your rebate in the "Homebuyer Discounts" module until 3/31/2022.</span>
+            <a href="javascript:void(0);" class="px-1">
+              <i class="text-3xl las la-times"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div x-show="currentTab === 'five' " 
+          class="p-4 mt-10 border border-gray-400 shadow-inner md:px-6 lg:px-10 xl:px-14 md:py-8 bg-gray-50 shadow-gray-200">
+          <h2 class="mb-8 text-3xl font-normal text-center capitalize text-primary md:text-4xl">
+            Your Current Rebate Offer: <span class="font-bold text-secondary">$4,500</span></h2>
+
+          <div class="space-y-4">
+            <p class="lg:text-lg">Based on the search parameters you entered on 1/19/2022, your rebate offer is $4,500 if you purchase a property through Explore (Nomadic Real Estate Broker Services).</p>
+
+            <p class="lg:text-lg">The rebate is paid out within one week after settlement, when you use a sales agent from Nomadic Real Estate Broker Services. </p>
+            
+            <h2 class="!my-6 text-2xl font-normal text-center capitalize text-primary md:text-3xl">
+              This rebate is valid until 3/31/2022:</h2>
+            
+            <p class="lg:text-lg">This amount will be honored for any Buyer Agency Agreements signed with Nomadic Real Estate Broker Services on or before 3/31/2022.</p>
+
+            <div class="flex justify-center !mt-6 lg:!mt-10">
+              <a href="javascript:void(0);" class="px-4 md:px-6 xl:px-8 py-2.5 bg-primary hover:bg-transparent hover:text-primary text-base lg:text-lg capitalize border border-primary text-white font-normal cursor-pointer transition duration-300 ease-in-out tracking-wide">
+                Contact Broker
+              </a>
+            </div>
+          </div>
+        
+        </div>
+        <!-- END home buyer step 5 -->        
+
+        
       </div>
     </div>
     <!-- main screen -->
